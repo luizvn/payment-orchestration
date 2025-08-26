@@ -1,0 +1,30 @@
+# 1. Configurações Padrão do Servidor
+server:
+  port: 8761  # A porta padrão e convencional para o Eureka Server.
+
+spring:
+  application:
+    name: eureka-server # O nome que identificará esta aplicação.
+
+# 2. Configurações Específicas do Eureka
+eureka:
+  client:
+    # =================================================================================
+    # AS DUAS CONFIGURAÇÕES MAIS IMPORTANTES PARA UM SERVIDOR STANDALONE
+    # =================================================================================
+    # false: Diz ao servidor para NÃO se registrar como um cliente nele mesmo.
+    register-with-eureka: false
+    # false: Diz ao servidor para NÃO buscar o registro de serviços. Ele é a fonte da verdade.
+    fetch-registry: false
+    
+    # Esta configuração informa aos futuros clientes onde eles devem se registrar.
+    # Neste caso, o servidor informa que o endereço é ele mesmo.
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+  server:
+    # (Opcional, mas útil para desenvolvimento)
+    # Desativa o modo de autoproteção. Em desenvolvimento, onde você sobe e desce
+    # serviços constantemente, isso evita que o Eureka exiba avisos de que as
+    # réplicas não estão se comunicando. Em PRODUÇÃO, o ideal é manter 'true' (padrão).
+    enable-self-preservation: false
