@@ -21,6 +21,7 @@
         <spring-cloud.version>2025.0.0</spring-cloud.version>
         <lombok.version>1.18.34</lombok.version>
         <springdoc-openapi.version>2.7.0</springdoc-openapi.version>
+        <modelmapper.version>3.2.4</modelmapper.version>
     </properties>
 
     <modules>
@@ -55,6 +56,11 @@
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.modelmapper</groupId>
+                <artifactId>modelmapper</artifactId>
+                <version>${modelmapper.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
