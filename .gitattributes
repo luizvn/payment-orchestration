@@ -1,2 +1,7 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Define o comportamento padrão para todos os arquivos
+# Garante que o Git não interfira nos arquivos binários e normalize os arquivos de texto.
+* text=auto eol=lf
+
+# Força a terminação de linha para CRLF (padrão Windows) em scripts de batch/cmd
+*.cmd text eol=crlf
+*.bat text eol=crlf

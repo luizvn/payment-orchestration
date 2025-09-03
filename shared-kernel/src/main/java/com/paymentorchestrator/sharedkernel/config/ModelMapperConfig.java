@@ -1,4 +1,4 @@
-package com.payment_orchestrator.config;
+package com.paymentorchestrator.sharedkernel.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

@@ -1,4 +1,4 @@
-package com.payment_orchestrator.eureka_server;
+package com.paymentorchestrator.eurekaserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
